@@ -7,4 +7,6 @@ properties:
   project_id:
     title: Project ID
     type: integer
+required: 
+  - project_id
 version: 2
