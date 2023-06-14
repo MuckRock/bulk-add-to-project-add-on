@@ -9,4 +9,6 @@ properties:
     type: integer
 required: 
   - project_id
+categories:
+  - bulk
 version: 2
