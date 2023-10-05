@@ -7,7 +7,7 @@ class ProjectAdder(SoftTimeOutAddOn):
         for document in self.get_documents():
             if document not in project.document_list:
                 project.document_list.append(document)
-        project.put()
+        project.save()
 
 if __name__ == "__main__":
     ProjectAdder().main()
