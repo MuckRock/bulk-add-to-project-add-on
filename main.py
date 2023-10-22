@@ -3,9 +3,6 @@ from documentcloud.addon import AddOn, SoftTimeOutAddOn
 class ProjectAdder(SoftTimeOutAddOn):
     """DocumentCloud Add-On that adds a query of documents to a project"""
     def main(self):
-        if not self.documents:
-            self.set_message("Please select at least one document.")
-            return
         project = self.client.projects.get(self.data.get("project_id"))
         for document in self.get_documents():
             if document not in project.document_list:
