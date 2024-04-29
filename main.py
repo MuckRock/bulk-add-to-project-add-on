@@ -10,6 +10,7 @@ class ProjectAdder(SoftTimeOutAddOn):
             for document in doc_group:
                 if document not in project.document_list:
                     project.document_list.append(document)
+                    print(project.document_list)
             project.save()
 
 if __name__ == "__main__":
