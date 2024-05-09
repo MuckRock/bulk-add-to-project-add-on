@@ -13,6 +13,7 @@ class ProjectAdder(AddOn):
                 if document is not None:
                     docs_to_add.append(document)
             project.add_documents(docs_to_add)
+            time.sleep(10)
 
 if __name__ == "__main__":
     ProjectAdder().main()
