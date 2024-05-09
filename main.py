@@ -11,7 +11,7 @@ class ProjectAdder(AddOn):
             docs_to_add = [] 
             for document in doc_group:
                 docs_to_add.append(document)
-                project.add_documents(docs_to_add)
+            project.add_documents(docs_to_add)
 
 if __name__ == "__main__":
     ProjectAdder().main()
