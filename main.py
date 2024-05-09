@@ -7,7 +7,7 @@ class ProjectAdder(AddOn):
     """DocumentCloud Add-On that adds a query of documents to a project"""
     def main(self):
         project = self.client.projects.get(self.data.get("project_id"))
-        for doc_group in grouper(self.get_documents(), BULK_LIMIT):
+        for doc_group in grouper(self.get_documents(), 100):
             docs_to_add = [] 
             for document in doc_group:
                 docs_to_add.append(document)
