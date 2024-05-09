@@ -10,7 +10,8 @@ class ProjectAdder(AddOn):
         for doc_group in grouper(self.get_documents(), 100):
             docs_to_add = [] 
             for document in doc_group:
-                docs_to_add.append(document)
+                if document is not None:
+                    docs_to_add.append(document)
             project.add_documents(docs_to_add)
 
 if __name__ == "__main__":
