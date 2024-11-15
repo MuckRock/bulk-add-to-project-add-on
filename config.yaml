@@ -11,4 +11,10 @@ required:
   - project_id
 categories:
   - bulk
+eventOptions:
+  name: site
+  events:
+    - hourly
+    - daily
+    - weekly
 version: 2
